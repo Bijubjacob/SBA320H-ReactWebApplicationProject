@@ -1,74 +1,55 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // FontAwesome for icons
+import { faBars } from "@fortawesome/free-solid-svg-icons"; // Hamburger icon
+import { Link } from "react-router-dom"; // For navigation links
 
 function Navigation() {
-    const [showMenu, setshowMenu] = useState(false)
-    let menu
-    let menuMask
+    const [showMenu, setshowMenu] = useState(false); // state to control the menu visibility
+    let menu;
+    let menuMask;
 
     if (showMenu) {
-        menu =
-            <div className="menu" >
-                The menu
+        const menuItems = [
+            { path: '/', label: 'Home' },
+            { path: '/about', label: 'About' },
+            { path: '/pexels/:id', label: 'Pexels Photo' }
+        ];
+
+        menu = (
+            <div className="menu">
                 <ul>
-                    <li>
-                        <Link to="/"
-                            className="Home"
-                            onClick={() => setshowMenu(false)}
-                        >
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/about"
-                            className="About"
-                            onClick={() => setshowMenu(false)}
-                        >
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/Pexels"
-                            className="Pexels"
-                            onClick={() => setshowMenu(false)}
-                        >
-                            Pexels Photo
-                        </Link>
-                    </li>
+                    {menuItems.map((item) => (
+                        <li key={item.path}>
+                            {/* Check if the path contains :id */}
+                            <Link
+                                to={item.path === '/pexels/:id' ? `/pexels/1` : item.path}
+                                className={item.label}
+                                onClick={() => setshowMenu(false)}
+                            >
+                                {item.label}
+                            </Link>
+                        </li>
+                    ))}
+
                 </ul>
             </div>
+        );
 
-        menuMask =
-            <div className="menuMask"
-                onClick={() => setshowMenu(false)}>
-
-            </div>
+        menuMask = (
+            <div className="menuMask" onClick={() => setshowMenu(false)}></div>
+        );
     }
-
-
 
     return (
         <nav>
             <span className="FontAwesomeIcon">
-                < FontAwesomeIcon
-                    icon={faBars}
-                    onClick={() => setshowMenu(!showMenu)}
-                />
+                <FontAwesomeIcon icon={faBars} onClick={() => setshowMenu(!showMenu)} />
             </span>
 
             {menuMask}
-
             {menu}
-
-
         </nav>
-    )
+    );
 }
 
 export default Navigation;

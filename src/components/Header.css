@@ -1,11 +1,16 @@
+/* Header styles */
 .header {
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
+    /* Fixed to center the content vertically */
     margin-top: 50px;
     padding: 15px;
 }
 
+/* Navigation bar styling */
 .Nav {
     font-weight: bold;
 }
+
+
