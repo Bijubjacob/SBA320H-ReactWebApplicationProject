@@ -25,10 +25,18 @@
 }
 
 /* Navigation link styling */
-.Home, .About, .Pexels {
+.Home,
+.About,
+.Pexels {
     color: blue;
     font-size: 2xl;
     font-weight: bold;
     margin: 10px;
     padding: 10px;
+    align-content: space-evenly;
+}
+
+.menuItems {
+    padding: 30px;
+    margin: auto;
 }

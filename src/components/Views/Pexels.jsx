@@ -29,7 +29,7 @@ function Pexels() {
 
     return (
         <div>
-            <h1>Pexels Photos (Page {id})</h1>
+            <h2>Pexels Photos (Page {id})</h2>
             {loading ? (
                 <p>Loading...</p>
             ) : (

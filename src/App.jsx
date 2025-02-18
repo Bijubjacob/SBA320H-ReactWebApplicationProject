@@ -5,6 +5,7 @@ import Header from './components/Header';
 import './App.css';
 import './components/Footer.css';
 import './components/Header.css';
+import './components/Views/Pexels.css';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"; // Note: `Switch` and `Route` are from `react-router-dom`
 import Home from './components/Views/Home';
 import About from './components/Views/About';

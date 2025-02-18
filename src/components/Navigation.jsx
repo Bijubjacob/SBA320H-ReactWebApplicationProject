@@ -17,11 +17,11 @@ function Navigation() {
 
         menu = (
             <div className="menu">
-                <ul>
+                <ul className="menuItems">
                     {menuItems.map((item) => (
                         <li key={item.path}>
                             {/* Check if the path contains :id */}
-                            <Link
+                            < Link
                                 to={item.path}  // Use item.path directly, no need for dynamic handling here
                                 className={item.label}
                                 onClick={() => setshowMenu(false)}
@@ -29,10 +29,11 @@ function Navigation() {
                                 {item.label}
                             </Link>
                         </li>
-                    ))}
+                    ))
+                    }
 
-                </ul>
-            </div>
+                </ul >
+            </div >
         );
 
         menuMask = (
