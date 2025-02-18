@@ -12,7 +12,7 @@ function Navigation() {
         const menuItems = [
             { path: '/', label: 'Home' },
             { path: '/about', label: 'About' },
-            { path: '/pexels/:id', label: 'Pexels Photo' }
+            { path: '/pexels/1', label: 'Pexels Photo' }
         ];
 
         menu = (
@@ -22,7 +22,7 @@ function Navigation() {
                         <li key={item.path}>
                             {/* Check if the path contains :id */}
                             <Link
-                                to={item.path === '/pexels/:id' ? `/pexels/1` : item.path}
+                                to={item.path}  // Use item.path directly, no need for dynamic handling here
                                 className={item.label}
                                 onClick={() => setshowMenu(false)}
                             >

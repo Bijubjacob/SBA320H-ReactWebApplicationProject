@@ -8,7 +8,7 @@ import './components/Header.css';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"; // Note: `Switch` and `Route` are from `react-router-dom`
 import Home from './components/Views/Home';
 import About from './components/Views/About';
-import Pexels from './components/Views/Pexels'; // The Pexels component (not fully defined here)
+import Pexels from './components/Views/Pexels';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
               <About />
             </Route>
             <Route path="/pexels/:id">
-              <Pexels /> {/* This will now match any route like /pexels/1, /pexels/2, etc. */}
+              <Pexels /> {/* This will match the dynamic ID route */}
             </Route>
 
           </Switch>
