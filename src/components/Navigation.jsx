@@ -14,6 +14,34 @@ function Navigation() {
         menu =
             <div className="menu" >
                 The menu
+                <ul>
+                    <li>
+                        <Link to="/"
+                            className="Home"
+                            onClick={() => setshowMenu(false)}
+                        >
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/about"
+                            className="About"
+                            onClick={() => setshowMenu(false)}
+                        >
+                            About
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/Pexels"
+                            className="Pexels"
+                            onClick={() => setshowMenu(false)}
+                        >
+                            Pexels Photo
+                        </Link>
+                    </li>
+                </ul>
             </div>
 
         menuMask =
@@ -37,14 +65,7 @@ function Navigation() {
             {menuMask}
 
             {menu}
-            <ul>
-                <li>
-                    <Link to="/" className='Home'>Home</Link>
-                </li>
-                <li>
-                    <Link to="/About" className='About'>About</Link>
-                </li>
-            </ul>
+
 
         </nav>
     )
