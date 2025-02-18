@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+.Nav {
+    font-weight: bold;
+}
