@@ -28,15 +28,22 @@
 .Home,
 .About,
 .Pexels {
+    display: block;
     color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2xl;
     font-weight: bold;
     margin: 10px;
     padding: 10px;
-    align-content: space-evenly;
 }
+
 
 .menuItems {
     padding: 30px;
     margin: auto;
+}
+
+.label {
+    padding: 200px;
+
 }

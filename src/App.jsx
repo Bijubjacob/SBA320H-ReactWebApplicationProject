@@ -6,7 +6,7 @@ import './App.css';
 import './components/Footer.css';
 import './components/Header.css';
 import './components/Views/Pexels.css';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"; // Note: `Switch` and `Route` are from `react-router-dom`
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"; // Note: `Switch` and `Route` are from `react-router-dom`
 import Home from './components/Views/Home';
 import About from './components/Views/About';
 import Pexels from './components/Views/Pexels';
@@ -18,16 +18,13 @@ function App() {
         <Router>
           <Header />
           <Switch>
-            <Route exact path="/">
-              <Home />
+            <Route exact path="/"><Home />
             </Route>
-            <Route path="/about">
-              <About />
+            <Route path="/about"><About />
             </Route>
             <Route path="/pexels/:id">
               <Pexels /> {/* This will match the dynamic ID route */}
             </Route>
-
           </Switch>
           <Footer />
         </Router>

@@ -24,8 +24,7 @@ function Navigation() {
                             < Link
                                 to={item.path}  // Use item.path directly, no need for dynamic handling here
                                 className={item.label}
-                                onClick={() => setshowMenu(false)}
-                            >
+                                onClick={() => setshowMenu(false)}>
                                 {item.label}
                             </Link>
                         </li>
